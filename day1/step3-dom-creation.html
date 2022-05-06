@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 740px;
+            height: 400px;
+            background-color: darkslategray;
+            padding: 5px;
+            margin: 10px auto;
+            overflow: auto;
+        }
+        #box div{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(220, 234, 234);
+            margin: 10px;
+            color: rgb(25, 27, 29);
+            text-align: center;
+            line-height: 100px;
+            float: left;
+            font-size: 40px;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            background-color: dimgray;
+            padding: 5px;
+            color: aliceblue;
+            margin: 10px auto;
+            cursor: pointer;
+            text-align: center;
+        }
+        nav{
+            clear: both;
+            display: flex;
+            box-align: center;
+        }
+    </style>
+    <script>
+        // addEventListener("load", init);
+        var count = 1;
+        var box;
+        function init(){
+            box = document.getElementById("box");
+            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler)
+            document.getElementsByTagName("button")[1].addEventListener("click", removeHandler)
+        }
+        function removeHandler(){
+            var innerBox = box.firstChild;
+            if(innerBox){
+               box.removeChild(innerBox);
+                count--;
+            }else{
+                alert("no box available to remove");
+            }
+        }
+        function clickHandler(){
+            var innerBox = document.createElement("div");
+            innerBox.addEventListener("click", removeSelectedBoxHandler);
+            innerBox.innerText = count;
+            box.appendChild(innerBox);
+            count++;
+        }
+        function removeSelectedBoxHandler(evt){
+            // alert("you clicked the innerBox")
+            var innerBox = evt.target;
+               box.removeChild(innerBox);
+                count--;
+        }
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+   <nav>
+    <button>Add Box</button>
+    <button>Remove Box</button>
+   </nav>
+   <hr>
+    <div id="box"></div>
+</body>
+</html>

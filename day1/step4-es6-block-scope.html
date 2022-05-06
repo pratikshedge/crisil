@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>block scope is es6</title>
+    <script>
+        // var let const
+        // var gets hoisted, can change at any point
+        // let gets hoisted to TDZ, developers can not access it, can change at any point
+        // const gets hoisted to TDZ, developers can not access it, can not be re-assigned;
+        var hero = {
+            title : 'Ironman',
+            power : 6
+        };
+
+        function checkPower(){
+            // var tempTitle = undefined;
+            // temporal dead zone : tdz
+            if(hero.power > 5){
+               const tempTitle = hero.title;
+               hero.title = tempTitle+" is strong";
+               console.log(tempTitle);// ???
+            }
+        };
+
+        checkPower();
+
+        console.log(hero.title);// ??? 
+
+        for(let i = 0; i < 100; i++){
+            console.log(i);
+        };
+
+        console.log('present value of i is ',i);// ???? 
+
+        if(window.i){
+            console.log("i exists")
+        }else{
+            console.log("i do not exists")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

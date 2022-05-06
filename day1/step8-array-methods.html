@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [77,18,4,16,35,7,14,10,1];
+        /* let doubleArr = [];
+        for(let i = 0; i < arr.length; i++){
+            doubleArr.push(arr[i] * 2);
+        }; */
+
+       /*  let doubleArr = arr.map(function(val,idx,ar){
+            return val * 2
+        }); */
+
+        // MAP
+        let doubleArr = arr.map(val => val * 2 );
+       
+        console.log(arr);
+        console.log(doubleArr);
+
+       /*  
+        let total = 0;
+        for(let i = 0; i < arr.length; i++){
+           total += arr[i];
+        };
+        console.log(total);// 
+        */
+       /*   
+       let total = arr.reduce(function(initVal,val,idx,ar){
+           return initVal + val;
+       },0); 
+       */
+
+        /*        
+        let total = arr.reduce((initVal,val) => initVal + val, 0);
+        console.log(total); 
+        */
+       var greaterThan10 = arr.filter(function(val, idx, arr){
+           return val > 10
+       });
+       var greaterThan10 = arr.filter( val => val > 10 );
+       console.log(greaterThan10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
