@@ -6,6 +6,13 @@ import { Component } from "@angular/core";
         <h1>
             Header Component
         </h1>
-    `
+    `,
+    styles : [`
+        h1{
+            background-color : yellow;
+            padding : 20px;
+            margin : 10px;
+        }
+    `]
 })
 export class HeaderComp{}
