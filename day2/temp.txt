@@ -30,3 +30,7 @@ import { Component } from "@angular/core";
     `
 })
 export class HeaderComp{}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ng new second-step --routing=false --style=css
+
