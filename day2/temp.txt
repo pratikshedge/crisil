@@ -1,36 +1,22 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-
-@NgModule({
-  /* declarations is a list of all components, pipes and directives that your project contains  */
-  declarations: [ AppComponent ],
-  /* imports is a list of all modules that your project uses */
-  imports: [ BrowserModule ],
-  /* providers is a list of all services that your project uses */
-  providers: [],
-  /* bootstrap is a list of components that will be main components for your application */
-  /* usually you will have one root component */
-  bootstrap: [ AppComponent ]
-})
-export class AppModule { }
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector : 'app-header',
-    template : `
-        <h1>
-            Header Component
-        </h1>
-    `
+  selector: 'app-root',
+  template : `
+    <h1 (click)="clickHandler()">{{ title }}</h1>
+    <h1 innerHTML="{{ title }}"></h1>
+    <h1 innerText="{{ title }}"></h1>
+    <h1 textContent="{{ title }}"></h1>
+    <h1 [textContent]="title"></h1>
+    <h1 bind-textContent="title"></h1>
+    <hr>
+    <input #ti1 [value]="title" type="text" (input)="title = ti1.value" >
+    {{ title }}
+  `
 })
-export class HeaderComp{}
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-ng new second-step --routing=false --style=css
-
+export class AppComponent {
+  title = 'welcome to your life';
+  clickHandler(){
+    alert("you clicked me")
+  }
+}
