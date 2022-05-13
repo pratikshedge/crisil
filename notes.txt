@@ -26,3 +26,6 @@ ng serve
 open a web browser and navigate to localhost:4200
 
 ng new steps --createApplication=false --routing=false --style=css
+
+
+ng g application step1-communication -t -s --skipTests=true
