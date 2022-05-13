@@ -29,3 +29,5 @@ ng new steps --createApplication=false --routing=false --style=css
 
 
 ng g application step1-communication -t -s --skipTests=true --routing=false --style=css
+
+ng g c child -t -s -S 
