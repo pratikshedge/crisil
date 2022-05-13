@@ -12,3 +12,11 @@ vscode-icons			          v11.11.0		VSCode Icons Team
 
 install nodejs latest version
 
+npm i -g @angular/cli
+ng new steps
+cd steps
+ng serve
+
+open a web browser and navigate to localhost:4200
+
+ng new steps --createApplication=false --routing=false --style=css
