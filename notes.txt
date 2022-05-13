@@ -11,6 +11,12 @@ Prettier - Code formatter   v9.5.0		Prettier
 vscode-icons			          v11.11.0		VSCode Icons Team
 
 install nodejs latest version
+npm i -g typescript  
+
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+
+tsc -w
 
 npm i -g @angular/cli
 ng new steps
