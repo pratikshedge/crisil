@@ -1,14 +1,14 @@
 install VS code
 install the following extensions on VS code
 --------------------------------------------------
-Mithril Emmet 		          v0.7.7 		FallenMax
-open in browser 	          v2.0.0 		TechER
-npm						              v0.3.25		Microsoft
-Live Server			            v5.7.5		Ritwick Dey
+Mithril Emmet               v0.7.7 		FallenMax
+open in browser             v2.0.0 		TechER
+npm                         v0.3.25		Microsoft
+Live Server                 v5.7.5		Ritwick Dey
 Angular Language Service    v13.3.2		Angular
 Angular 2 TypeScript Emmet  v2.0.3		jakethashi
 Prettier - Code formatter   v9.5.0		Prettier
-vscode-icons			          v11.11.0		VSCode Icons Team
+vscode-icons                v11.11.0		VSCode Icons Team
 
 install nodejs latest version
 npm i -g typescript  
